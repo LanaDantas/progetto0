@@ -1,9 +1,15 @@
 <?php
-require "../../config.php";
+session_start();
 
+if (isset($_SESSION['COD_CLIENTE'])) {
+  $cod_cliente = $_SESSION['COD_CLIENTE'];
+}
 ?>
 
-<?php require "../header.php"; ?>
+<?php require "../header.php"; 
+
+/* print_r(isset($_SESSION['COD_CLIENTE'])); */
+?>
 
 
 <form action="" method="post">
@@ -116,7 +122,7 @@ require "../../config.php";
         <h1>Per acquistare i biglietti</h1>
         <h2>Fai il login</h2>
         <p>Ci vuole solo un minuto!</p>
-        <button class="main__btn"><a href="#">Accedi</a></button>
+        <button class="main__btn"><a href="http://localhost/progetto0/views/login-registrazione/login.php">Accedi</a></button>
       </div>
       <div class="main__img--container">
         <div class="main__img--card" id="card-2">

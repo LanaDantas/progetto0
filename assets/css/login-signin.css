@@ -5,17 +5,25 @@
 }
 
 body {
-	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Kumbh Sans", sans-serif;
+	background: #f6f5f7;
 	height: 100vh;
 	margin: -20px 0 50px;
 }
 
 h1 {
+	background: #ee0979;
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
 	font-weight: bold;
 	margin: 0;
 }
@@ -25,19 +33,36 @@ h2 {
 }
 
 p {
-	font-size: 14px;
-	font-weight: 100;
+	font-size: 16px;
+	font-weight: 700;
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
+	background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #8f0eff, #da22ff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 span {
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 700;
+	background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #8f0eff, #da22ff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 a {
-	color: #333;
+	color: #FFFFFF;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
@@ -46,16 +71,19 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid #F2eee3;
-	background-color: #F2eee3;
-	color: black;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	border-color: red;
+	border-color: #FFFFFF;
 	cursor: pointer;
+	background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    color: #fff;
+	transition: all 0.35s;
+    outline: none;
 }
 
 button:active {
@@ -68,7 +96,19 @@ button:focus {
 
 button.ghost {
 	background-color: transparent;
-	border-color: red;
+	border-color: #FFFFFF;
+	background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    color: #fff;
+	transition: all 0.35s;
+    outline: none;
+}
+
+button:hover {
+	background: -webkit-linear-gradient(to right, #fd1d1d, #ff1ead);
+    background: linear-gradient(to right, #ff1ead, #ff1ead);
+    transition: all 0.35s;
 }
 
 form {
@@ -83,8 +123,13 @@ form {
 }
 
 input {
-	background-color: #f2eee3;
+	border-color: #FFFFFF;
+	background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 	border: none;
+	color: #FFFFFF;
+	font-weight: bold;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
@@ -95,11 +140,15 @@ input:is(:focus-visible, :active, :focus) {
 	outline: unset;
 }
 
+::placeholder {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-			0 10px 10px rgba(0,0,0,0.22);
+	box-shadow: 0px 0px 5px 2px #FFFFFF;
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -166,9 +215,9 @@ input:is(:focus-visible, :active, :focus) {
 }
 
 .overlay {
-	background: #F2eee3;
-	background: -webkit-linear-gradient(to right, #F2eee3, #e7d4c5);
-	background: linear-gradient(to right, #F2eee3, #e7d4c5);
+	background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+    padding: 200px 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -222,7 +271,7 @@ input:is(:focus-visible, :active, :focus) {
 }
 
 .social-container a {
-	border: 1px solid red;
+	border: 1px solid #FFFFFF;
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -230,5 +279,21 @@ input:is(:focus-visible, :active, :focus) {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-	background: #f2eee3;
+	background: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+	transition: all 0.35ms;
+}
+
+.social-container a:hover {
+	background: linear-gradient(to right, #fc00ff 0%, #00dbde 100%);
+	transition: all 0.35ms;
+}
+
+.error_login1 {
+	padding-bottom: 10px;
+    font-weight: bold;
+    color: black;
+    text-decoration: 2px underline;
+    text-decoration-color: red;
+    text-transform: uppercase;
+    font-size: 13px;
 }

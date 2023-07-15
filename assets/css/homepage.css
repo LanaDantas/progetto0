@@ -26,7 +26,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 #navbar__logo {
@@ -65,6 +65,27 @@
   transition: all 0.3s ease;
   text-align: center;
   font-size: 16px;
+}
+
+/* #riepilogo-page {
+  width: 50px;
+} */
+
+#riepilogo-page i {
+  color: #FFFFFF;
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+#riepilogo-page i:is(:hover, :active, :focus) {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mo-text-fill-color: transparent;
 }
 
 .navbar__btn {
@@ -128,7 +149,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 60vh;
+    height: 85vh;
     font-size: 1.6rem;
   }
 

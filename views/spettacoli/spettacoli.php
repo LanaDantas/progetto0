@@ -31,7 +31,7 @@ $id = $_GET['id'];
                     <p><?php echo $row['DATA_REPLICA'] ?> h. 21</p>
                     <br>
                     <h4>Prezzo: <?php echo $row['PREZZO'] ?> €</h4>
-                    <div class="services__btn"><a href="">Prenota biglietto</a href=""></div>
+                    <div class="services__btn"><a href="">Prenota biglietto</a></div>
                 </div>
             <?php endforeach; ?>
         </div>

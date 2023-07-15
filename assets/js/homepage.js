@@ -17,6 +17,8 @@ const highlightMenu = () => {
   const regioMenu = document.querySelector('#regio-page');
   const carignanoMenu = document.querySelector('#carignano-page');
   const alfieriMenu = document.querySelector('#alfieri-page');
+  const riepilogoMenu = document.querySelector('#riepilogo-page');
+
   let scrollPos = window.scrollY;
   // console.log(scrollPos);
 
@@ -26,24 +28,28 @@ const highlightMenu = () => {
     regioMenu.classList.remove('highlight');
     carignanoMenu.classList.remove('highlight');
     alfieriMenu.classList.remove('highlight');
+    riepilogoMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 960 && scrollPos < 1400) {
     regioMenu.classList.add('highlight');
     carignanoMenu.classList.remove('highlight');
     alfieriMenu.classList.remove('highlight');
     homeMenu.classList.remove('highlight');
+    riepilogoMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+  } else if (window.innerWidth > 960 && scrollPos < 2045) {
     regioMenu.classList.remove('highlight');
     carignanoMenu.classList.add('highlight');
     alfieriMenu.classList.remove('highlight');
     homeMenu.classList.remove('highlight');
+    riepilogoMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 960 && scrollPos < 3435) {
     homeMenu.classList.remove('highlight');
     regioMenu.classList.remove('highlight');
     carignanoMenu.classList.remove('highlight');
     alfieriMenu.classList.add('highlight');
+    riepilogoMenu.classList.remove('highlight');
     return;
   }
 
@@ -67,6 +73,7 @@ const hideMobileMenu = () => {
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
 
+// open theatre details when click on i icon
 function toggleText() {
   var texto = document.getElementById("info_teatro");
   if (texto.style.display === "none") {
