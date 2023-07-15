@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 $cssPaths = [
     "../../assets/css/homepage.css",
@@ -59,9 +61,20 @@ $jsPaths = [
                         <i class="fa-brands fa-opencart"></i>
                     </a>
                 </li>
-                <li class="navbar__btn">
-                    <a href="#sign-up" class="button" id="signup">Sign Up</a>
-                </li>
+
+                <?php
+                if (!isset($_SESSION['COD_CLIENTE'])) { ?>
+                    <li class="navbar__btn">
+                        <a href="#sign-up" class="button" id="signup">Accedi</a>
+                    </li>
+                <?php } ?>
+                <?php
+                if (isset($_SESSION['COD_CLIENTE'])) { ?>
+                    <li class="navbar__btn">
+                        <a href="http://localhost/progetto0/views/login-registrazione/logout.php" class="button" id="signup">Logout</a>
+                    </li>
+                <?php } ?>
+                
             </ul>
         </div>
     </nav>
