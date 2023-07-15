@@ -1,0 +1,1 @@
+<?php header('Location: http://localhost/progetto0/views/homepage/homepage.php'); ?>
