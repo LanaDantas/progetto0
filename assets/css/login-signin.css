@@ -292,8 +292,18 @@ input:is(:focus-visible, :active, :focus) {
 	padding-bottom: 10px;
     font-weight: bold;
     color: black;
-    text-decoration: 2px underline;
-    text-decoration-color: red;
+    text-decoration: 3px underline;
+    text-decoration-color: #ff0808;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.success_registration1 {
+	margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+    text-decoration: 3px underline;
+    text-decoration-color: #38e17e;
     text-transform: uppercase;
     font-size: 13px;
 }

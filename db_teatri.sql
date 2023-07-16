@@ -415,6 +415,20 @@ ALTER TABLE `teatri` ADD PRIMARY KEY (`COD_TEATRO`);
 ALTER TABLE `clienti`
 ADD
     PRIMARY KEY (`COD_CLIENTE`); 
+
+
+--
+-- AUTO_INCREMENT per la tabella `clienti`
+--
+ALTER TABLE `clienti`
+  MODIFY `COD_CLIENTE` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `biglietti`
+--
+ALTER TABLE `biglietti`
+  MODIFY `COD_OPERAZIONE` int NOT NULL AUTO_INCREMENT;
+
     
 COMMIT;
 

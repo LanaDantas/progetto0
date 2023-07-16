@@ -19,7 +19,15 @@ session_start();
 </head>
 
 <body>
+	<?php
+	if (isset($_GET['success'])) {
+		$success = $_GET['success'];
 
+		if ($success == 1) {
+			echo '<div class="success_registration1">Registrazione effetuata con sucesso! Procedere al login.</div>';
+		}
+	}
+	?>
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
 			<form action="../../controllers/Registrazione.php" method="post">
@@ -31,23 +39,25 @@ session_start();
 				</div>
 				<span>Registrati con email o nome utente</span>
 				<input type="text" name="NOME" placeholder="Name" required />
-				<input type="text" name="COGNOME" placeholder="Cognome" maxlength="10" required />
+				<input type="text" name="COGNOME" placeholder="Cognome" required />
+				<input type="number" name="TELEFONO" placeholder="Telefono" maxlength="10" required />
 				<input type="email" name="EMAIL" placeholder="Email" required />
+
 				<button type="submit" name="submit">Registrati</button>
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
 			<form action="../../controllers/Login.php" method="post">
-				
-				<?php 
+
+				<?php
 				if (isset($_GET['error'])) {
 					$error = $_GET['error'];
-					
+
 					if ($error == 1) {
 						echo '<div class="error_login1">Dati non validi. Prova ancora.</div>';
 					}
 				}
-				
+
 				$usernameValue = isset($_POST['EMAIL']) ? $_POST['EMAIL'] : '';
 				$passwordValue = isset($_POST['NOME']) ? $_POST['NOME'] : '';
 				?>

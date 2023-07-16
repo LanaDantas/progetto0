@@ -67,12 +67,8 @@
   font-size: 16px;
 }
 
-/* #riepilogo-page {
-  width: 50px;
-} */
-
 #riepilogo-page i {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 25px;
   transition: all 0.3s ease;
 }
@@ -372,7 +368,7 @@
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -mo-text-fill-color: transparent;  
+  -mo-text-fill-color: transparent;
 }
 
 .main__content p {
@@ -726,6 +722,45 @@
 .website__rights {
   color: #fff;
 }
+
+/** Riepilogo **/
+.riepilogo_log {
+  background: #000000;
+  background: linear-gradient(to right, #161616, #000000);
+}
+
+.riepilogo_log .hero__description {
+  margin-bottom: 50px;
+}
+
+select {
+  margin-bottom: 1em;
+  padding: 0.25em;
+  border: 0;
+  border-bottom: 2px solid;
+  border-bottom-color: 2px solid;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+select:is(:focus, :hover, :visited) {
+  outline: 0;
+  color: #ffffff;
+  background: #ff512f;
+  background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  transition: all 0.3s ease;
+}
+
+@keyframes loading {
+  to {
+    letter-spacing: 0.25em;
+  }
+}
+
+/* End of riepilogo */
 
 @media screen and (max-width: 820px) {
   .footer__links {
